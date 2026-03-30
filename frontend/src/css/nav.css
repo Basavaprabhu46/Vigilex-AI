@@ -1,0 +1,84 @@
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 60px;
+  background: rgba(10, 12, 16, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Fira Code", sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: rgb(227, 226, 226);
+  letter-spacing: 0.03em;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  background: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-tab {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: none;
+  color: var(--text2);
+  font-family: "Fira Code", sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-tab:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.nav-tab.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(0, 229, 176, 0.08);
+}
+
+.nav-badge {
+  padding: 4px 12px;
+  background: rgba(0, 229, 176, 0.12);
+  border: 1px solid rgba(0, 229, 176, 0.25);
+  border-radius: 20px;
+  font-family: "DM Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 16px;
+  }
+  .nav-badge {
+    display: none;
+  }
+}

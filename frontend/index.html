@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vigilex AI — Compliance Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira Code:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/variables.css" />
+    <link rel="stylesheet" href="src/css/base.css" />
+    <link rel="stylesheet" href="src/css/nav.css" />
+    <link rel="stylesheet" href="src/css/chat.css" />
+    <link rel="stylesheet" href="src/css/compliance.css" />
+    <link rel="stylesheet" href="src/css/analyzer.css" />
+    <link rel="stylesheet" href="src/css/prompt-settings.css" />
+    <link rel="stylesheet" href="src/css/utilities.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="logo">
+        <img src="orb-logo.svg" alt="Vigilex AI Logo" class="logo-icon" />
+        vigilex <span style="color: #00d68f">AI</span>
+      </div>
+      <div class="nav-tabs">
+        <button class="nav-tab active" data-tab="chat">💬 Chatbot</button>
+        <button class="nav-tab" data-tab="compliance">✅ Compliance</button>
+        <button class="nav-tab" data-tab="analyzer">📄 Analyzer</button>
+      </div>
+      <div class="nav-badge">DPDP · GDPR · IT ACT</div>
+    </nav>
+
+    <!-- APP -->
+    <div class="app-container">
+      <!-- CHAT PANEL -->
+      <div class="panel active" id="panel-chat"></div>
+
+      <!-- COMPLIANCE PANEL -->
+      <div class="panel" id="panel-compliance"></div>
+
+      <!-- ANALYZER PANEL -->
+      <div class="panel" id="panel-analyzer"></div>
+    </div>
+
+    <div id="prompt-settings-root"></div>
+
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+/* ── COMPLIANCE ── */
+.compliance-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+}
+
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 28px;
+}
+
+.form-section-title {
+  font-family: "Fira Code", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent2);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-top: 24px;
+}
+
+.form-section-title:first-child {
+  margin-top: 0;
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: 6px;
+  padding: 10px 8px;
+  margin: 2px -8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.check-item:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.check-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  margin-top: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.check-item label {
+  cursor: pointer;
+  flex: 1;
+}
+
+.check-item label strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.check-item label span {
+  font-size: 0.78rem;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.check-item .tag {
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.tag.dpdp {
+  background: rgba(0, 229, 176, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(0, 229, 176, 0.2);
+}
+.tag.gdpr {
+  background: rgba(0, 184, 255, 0.15);
+  color: var(--accent2);
+  border: 1px solid rgba(0, 184, 255, 0.2);
+}
+.tag.both {
+  background: rgba(255, 209, 102, 0.1);
+  color: var(--yellow);
+  border: 1px solid rgba(255, 209, 102, 0.2);
+}
+
+/* Score card */
+.score-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 24px;
+  position: sticky;
+  top: 80px;
+}
+
+.score-ring-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 20px;
+}
+
+.score-ring {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.score-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.score-ring circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.ring-bg {
+  stroke: var(--border2);
+}
+.ring-fill {
+  stroke: var(--accent);
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition:
+    stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 0.4s;
+}
+
+.score-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-num {
+  font-family: "Fira Code", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 0.7rem;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.score-grade {
+  text-align: center;
+  font-family: "Fira Code", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.risk-list {
+  list-style: none;
+}
+
+.risk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+}
+
+.risk-item:last-child {
+  border-bottom: none;
+}
+
+.risk-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.risk-dot.high {
+  background: var(--red);
+  box-shadow: 0 0 6px var(--red);
+}
+.risk-dot.med {
+  background: var(--yellow);
+}
+.risk-dot.low {
+  background: var(--green);
+}
+
+.calc-btn {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border: none;
+  border-radius: var(--r);
+  color: #000;
+  font-family: "Fira Code", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition:
+    opacity 0.2s,
+    transform 0.15s;
+}
+
+.calc-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.calc-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .compliance-layout {
+    grid-template-columns: 1fr;
+  }
+  .score-card {
+    position: static;
+  }
+}

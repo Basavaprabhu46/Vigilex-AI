@@ -1,0 +1,19 @@
+/* ── CSS VARIABLES ── */
+:root {
+  --bg:       #0a0c10;
+  --surface:  #111318;
+  --surface2: #181c24;
+  --border:   #1e2330;
+  --border2:  #252c3a;
+  --accent:   #00e5b0;
+  --accent2:  #00b8ff;
+  --warn:     #ff6b35;
+  --text:     #e8eaf0;
+  --text2:    #8892a4;
+  --text3:    #4a5568;
+  --green:    #00d68f;
+  --yellow:   #ffd166;
+  --red:      #ff4d6d;
+  --r:        8px;
+  --r2:       14px;
+}

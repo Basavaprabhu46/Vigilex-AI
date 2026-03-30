@@ -1,0 +1,44 @@
+/* ── UTILITIES ── */
+.btn-outline {
+  padding: 8px 18px;
+  background: none;
+  border: 1px solid var(--border2);
+  border-radius: var(--r);
+  color: var(--text2);
+  font-family: "Fira Code", sans-serif;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.progress-bar-wrap {
+  background: var(--border2);
+  border-radius: 4px;
+  height: 4px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 4px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0%;
+}
+
+.disclaimer {
+  background: rgba(255, 107, 53, 0.08);
+  border: 1px solid rgba(255, 107, 53, 0.15);
+  border-radius: var(--r);
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  color: #ff9a6c;
+  margin-top: 16px;
+  line-height: 1.5;
+}
